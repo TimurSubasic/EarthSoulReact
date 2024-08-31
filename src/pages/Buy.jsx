@@ -393,7 +393,11 @@ var zipMistake = 0
                 <Link to='/buy/cart' id="cart-btn" type="button" className="flex items-center justify-center space-x-3 p-2.5 border-2 border-gray-300 bg-white rounded-3xl shadow-md hover:scale-110 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900 duration-300">
                     <img src="/svgs/cart-arrow-down-svgrepo-com.svg" className="h-12 dark:invert" alt=""/>
 
-                    <span id="cart-amount" className="text-3xl font-bold mx-2">0</span>
+                    <span id="cart-amount" className="text-3xl font-bold mx-2">
+                        {
+                            getCartData().amount25 + getCartData().amount50
+                        }
+                    </span>
 
                 </Link>
                 
