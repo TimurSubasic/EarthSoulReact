@@ -1,11 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { MdClose } from "react-icons/md";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
-import { getCartData, updateCartData } from '../utils/shippingData';
+import { getShippingData, updateCartData } from '../utils/shippingData';
 
 const Cart = () => {
+
+    const navigate = useNavigate()
 
     const handleCartUpdateData = () => {
 
@@ -16,7 +18,13 @@ const Cart = () => {
             totalPrice: getPrice()
         })
 
-        console.log(getCartData())
+        if (getShippingData().name == '') {
+            navigate('/buy')
+        }
+        else{
+            navigate('/buy/confirmation')
+        }
+        
         }
 
         else{

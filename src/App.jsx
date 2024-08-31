@@ -7,12 +7,13 @@ import Info from './pages/Info';
 import Buy from './pages/Buy';
 import ScrollToTop from './components/ScrollToTop';
 import Cart from './pages/Cart';
+import Confirmation from './pages/Confirmation';
 
 function App() {
   const location = useLocation();
 
   // Define the route paths where the Navbar and Footer should not be displayed
-  const noNavFooterPaths = ['/buy/cart'];
+  const noNavFooterPaths = ['/buy/cart', '/buy/confirmation'];
 
   return (
     <div className='flex flex-col min-h-[100vh] bg-gray-200 dark:bg-slate-800 dark:text-white duration-300 '>
@@ -27,6 +28,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/buy" element={<Buy />} />
           <Route path="/buy/cart" element={<Cart />} />
+          <Route path="/buy/confirmation" element={<Confirmation />} />
         </Routes>
       </main>
 

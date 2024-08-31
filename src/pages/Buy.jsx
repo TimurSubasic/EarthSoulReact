@@ -1,9 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { updateShippingData, getShippingData } from '../utils/shippingData';
+import { Link, useNavigate } from 'react-router-dom';
+import { updateShippingData, getCartData } from '../utils/shippingData';
 
 const Buy = () => {
+
+
+    const navigate = useNavigate()
 
 
     
@@ -22,7 +25,6 @@ const handleShippingUpdate = () => {
         message: message
      });
 
-    console.log(getShippingData());
 
 };
 
@@ -279,6 +281,14 @@ var zipMistake = 0
 // ALL DATA IS OK
         if(nameok+surnameok+mailok+addressok+countryok+cityok+zipok == 7){
             handleShippingUpdate()
+
+            if (getCartData().totalPrice == 0) {
+                navigate('/buy/cart')
+            }
+            else{
+                navigate('/buy/confirmation')
+            }
+
         }
 
         else{
@@ -380,7 +390,7 @@ var zipMistake = 0
                     Podatci za dostavu
                 </h3>
 
-                <Link to='/buy/cart' id="cart-btn" type="button" className="flex items-center justify-center space-x-3 p-2.5 border-2 border-gray-300 bg-white rounded-3xl shadow-md hover:scale-110 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900 duration-300 animate-wiggle">
+                <Link to='/buy/cart' id="cart-btn" type="button" className="flex items-center justify-center space-x-3 p-2.5 border-2 border-gray-300 bg-white rounded-3xl shadow-md hover:scale-110 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900 duration-300">
                     <img src="/svgs/cart-arrow-down-svgrepo-com.svg" className="h-12 dark:invert" alt=""/>
 
                     <span id="cart-amount" className="text-3xl font-bold mx-2">0</span>
@@ -563,7 +573,7 @@ var zipMistake = 0
 
 
             <button onClick={validateData} id="buy" type="button" className="text-3xl text-center py-5 w-full bg-cyan-600 rounded-xl text-white font-serif uppercase shadow-lg hover:shadow-cyan-600/30 duration-300 ">
-                naručite
+                Nastavite
             </button>
 
 
