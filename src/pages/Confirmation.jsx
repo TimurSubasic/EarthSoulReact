@@ -10,6 +10,17 @@ const Confirmation = () => {
 
     const cartData = getCartData()
 
+    const getBuyButton = () => {
+
+        if (shippingData.name != '' && cartData.totalPrice != 0) {
+
+            return <button className='text-3xl text-center py-5 w-full bg-cyan-600 rounded-xl text-white font-serif uppercase shadow-lg hover:shadow-cyan-600/30 duration-300 my-8 '>
+                naručite
+            </button>
+        }
+
+    }
+
     return (
         
 
@@ -134,9 +145,9 @@ const Confirmation = () => {
 
 </div>
 
-<button className='text-3xl text-center py-5 w-full bg-cyan-600 rounded-xl text-white font-serif uppercase shadow-lg hover:shadow-cyan-600/30 duration-300 my-8 '>
-    naručite
-</button>
+{
+    getBuyButton()
+}
 
 </section>
 
