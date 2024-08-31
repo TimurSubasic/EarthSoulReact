@@ -1,7 +1,8 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { HiChevronDoubleDown } from "react-icons/hi";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 function Navbar() {
 
@@ -11,6 +12,28 @@ function Navbar() {
   const path = location.pathname
 
   const [menuState, setMenuState] = useState(false)
+
+  const [darkMode, setDarkMode] = useState(false)
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        setDarkMode(true);
+        document.documentElement.classList.add('dark');
+    }
+}, [])
+
+
+const toggleDarkMode = () => {
+  if (darkMode) {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+  } else {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+  }
+  setDarkMode(!darkMode);
+}
 
 
 
@@ -45,7 +68,23 @@ function Navbar() {
               </Link>
               
 
-              {/* Mzd dodati dark toggle mode */}
+              {/* dark toggle mode */}
+
+              <div onClick={toggleDarkMode} className="h-7 w-7 cursor-pointer relative">
+                  {/* Sun Icon */}
+                  <FaSun
+                      className={`absolute h-full w-full transition-all duration-700 ${
+                          darkMode ? 'opacity-0' : 'opacity-100'
+                      }`}
+                  />
+                  {/* Moon Icon */}
+                  <FaMoon
+                      className={`absolute h-full w-full transition-all duration-700 ${
+                          darkMode ? 'opacity-100' : 'opacity-0'
+                      }`}
+                  />
+               </div>
+
 
 
             </div>
@@ -87,6 +126,20 @@ function Navbar() {
                 
 
                 {/* Dark mode toggle br 2 */}
+              <div onClick={toggleDarkMode} className="h-7 w-7 cursor-pointer relative text-white">
+                  {/* Sun Icon */}
+                  <FaSun
+                      className={`absolute h-full w-full transition-all duration-700 ${
+                          darkMode ? 'opacity-0' : 'opacity-100'
+                      }`}
+                  />
+                  {/* Moon Icon */}
+                  <FaMoon
+                      className={`absolute h-full w-full transition-all duration-700 ${
+                          darkMode ? 'opacity-100' : 'opacity-0'
+                      }`}
+                  />
+               </div>
 
 
               </div>
