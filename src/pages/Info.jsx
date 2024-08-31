@@ -184,81 +184,173 @@ const Info = () => {
 
     </div>
 
+      {/* toggle za vise benefita */}
     {/* <button id="more-benefites-btn" type="button" className="text-center w-full font-bold text-2xl md:text-3xl my-4 md:my-8 animate-pulse-strong">
       I više...
     </button> */}
 
-    <div id="benefit-space" className="my-12 hidden"></div>
+    <div id="benefit-space" className="my-12 "></div>
 
     {/* More Benefits Section */}
-    {/* mzd ubaciti toggle mzd ne */}
-    <div id="more-benefites" className="flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-10 hidden">
+    <div id="more-benefites" className="flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-10 ">
 
-      {/* First Row of More Benefits */}
-      <div className="flex flex-col space-y-6 w-full">
 
-        {/* Benefit 9 */}
-        <div className="flex space-x-5 justify-center items-center rounded-lg bg-white dark:bg-slate-900 shadow-lg h-40 p-5">
+                    {/* first row */}
+                <div className="flex flex-col space-y-6 w-full">
 
-          <div className="flex flex-col space-y-2 items-start p-5 rounded-lg border-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800">
-            <h3 className="text-3xl font-semibold text-center">Benefiti za Žene</h3>
-          </div>
+                    {/* item 1 */}
+                    <div className="flex space-x-5 justify-center items-center rounded-lg bg-white dark:bg-slate-900 shadow-lg h-40 p-5">
 
-        </div>
 
-        {/* Benefit 10 */}
-        <div className="flex space-x-5 justify-center items-center rounded-lg bg-white dark:bg-slate-900 shadow-lg h-40 p-5">
+                        <div className="flex flex-col space-y-2 items-start p-5 rounded-lg border-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800">
 
-          <div className="flex flex-col space-y-2 items-start p-5 rounded-lg border-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800">
-            <h3 className="text-3xl font-semibold text-center">Pomaže kod neplodnosti</h3>
-          </div>
+                            <h3 className="text-3xl font-semibold text-center">
+                                Benefiti za Žene
+                            </h3>
 
-        </div>
+                        </div>
 
-        {/* Benefit 11 */}
-        <div className="flex space-x-5 justify-center items-center rounded-lg bg-white dark:bg-slate-900 shadow-lg h-40 p-5">
 
-          <div className="flex flex-col space-y-2 items-start p-5 rounded-lg border-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800">
-            <h3 className="text-3xl font-semibold text-center">Jačanje Imuniteta</h3>
-          </div>
+                    </div>
 
-        </div>
 
-      </div>
+                    {/* item 2 */}
+                    <div className="benefit-item">
 
-      {/* Second Row of More Benefits */}
-      <div className="flex flex-col space-y-6 w-full">
+                        <img src="/svgs/pregnant-woman-svgrepo-com.svg" className="h-12 dark:invert duration-1000" alt=""/>
 
-        {/* Benefit 12 */}
-        <div className="flex space-x-5 justify-center items-center rounded-lg bg-white dark:bg-slate-900 shadow-lg h-40 p-5">
+                        <div className="flex flex-col space-y-2 items-start">
 
-          <div className="flex flex-col space-y-2 items-start p-5 rounded-lg border-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800">
-            <h3 className="text-3xl font-semibold text-center">Poboljšanje rada jetre</h3>
-          </div>
+                            <h3 className="text-3xl font-semibold">
+                                Povećava plodnost
+                            </h3>
 
-        </div>
+                        </div>
 
-        {/* Benefit 13 */}
-        <div className="flex space-x-5 justify-center items-center rounded-lg bg-white dark:bg-slate-900 shadow-lg h-40 p-5">
 
-          <div className="flex flex-col space-y-2 items-start p-5 rounded-lg border-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800">
-            <h3 className="text-3xl font-semibold text-center">Regulacija šećera u krvi</h3>
-          </div>
+                    </div>
 
-        </div>
+                    {/* item 3 */}
+                    <div className="benefit-item">
 
-        {/* Benefit 14 */}
-        <div className="flex space-x-5 justify-center items-center rounded-lg bg-white dark:bg-slate-900 shadow-lg h-40 p-5">
+                        <img src="/svgs/period-svgrepo-com.svg" className="h-12 dark:invert duration-1000" alt=""/>
 
-          <div className="flex flex-col space-y-2 items-start p-5 rounded-lg border-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800">
-            <h3 className="text-3xl font-semibold text-center">Poboljšanje kvalitete sperme</h3>
-          </div>
+                        <div className="flex flex-col space-y-2 items-start">
 
-        </div>
+                            <h3 className="text-3xl font-semibold">
+                                Reguliše menstrualni ciklus
+                            </h3>
 
-      </div>
+                        </div>
 
-    </div>
+
+                    </div>
+
+                    {/* item 4 */}
+                    <div className="benefit-item">
+
+                        <img src="/svgs/dna-svgrepo-com.svg" className="h-12 dark:invert duration-1000 rotate-12" alt=""/>
+
+                        <div className="flex flex-col space-y-2 items-start">
+
+                            <h3 className="text-3xl font-semibold">
+                                Balansira hormone
+                            </h3>
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+                </div>
+
+
+
+                {/* second row */}
+                <div className="flex flex-col space-y-6 w-full">
+
+                    {/* item 1 */}
+                    <div className="flex space-x-5 justify-center items-center rounded-lg bg-white dark:bg-slate-900 shadow-lg h-40 p-5">
+
+
+                        <div className="flex flex-col space-y-2 p-5 items-start rounded-lg border-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800">
+
+                            <h3 className="text-3xl font-semibold text-center inline-block">
+                                Benefiti za Muškarce
+                            </h3>
+
+                        </div>
+
+
+                    </div>
+
+
+                    {/* item 2 */}
+                    <div className="benefit-item">
+
+                        <img src="/svgs/muscle-gain-svgrepo-com.svg" className="h-12 dark:invert duration-1000" alt=""/>
+
+                        <div className="flex flex-col space-y-2 items-start">
+
+                            <h3 className="text-3xl font-semibold">
+                                Regeneriše mišiće
+                            </h3>
+
+                        </div>
+
+
+                    </div>
+
+                    {/* item 3 */}
+                    <div className="benefit-item">
+
+                        <img src="/svgs/weight-lifting-up-svgrepo-com.svg" className="h-12 dark:invert duration-1000" alt=""/>
+
+                        <div className="flex flex-col space-y-2 items-start">
+
+                            <h3 className="text-3xl font-semibold">
+                                Povećava snagu na treninzima
+                            </h3>
+
+                        </div>
+
+
+                    </div>
+
+                    
+                    {/* item 4 */}
+                    <div className="benefit-item">
+
+                        <img src="/svgs/male-gender-heart-svgrepo-com.svg" className="h-12 dark:invert duration-1000" alt=""/>
+
+                        <div className="flex flex-col space-y-2 items-start">
+
+                            <h3 className="text-3xl font-semibold">
+                                Povećava libido
+                            </h3>
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+                </div>
+
+                
+
+
+
+
+
+                </div>
 
   </div>
 
@@ -276,7 +368,7 @@ const Info = () => {
 
             <div className="flex flex-col space-y-12 md:flex-row md:space-y-0 md:space-x-10 lg:space-x-16">
 
-                {/* <!-- 25g price --> */}
+                {/* {/* 25g price */} 
                 <div className="p-6 rounded-lg flex flex-col space-y-8 items-center justify-center bg-white dark:bg-slate-900 shadow-xl md:w-1/2">
 
                     <h3 className="p-4 rounded-xl border-2 border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 text-3xl font-semibold font-serif">
@@ -296,7 +388,7 @@ const Info = () => {
                 </div>
 
 
-                {/* <!-- 50g price --> */}
+                {/* {/* 50g price */} 
                 <div className="p-6 rounded-lg flex flex-col space-y-8 items-center justify-center bg-white dark:bg-slate-900 shadow-xl md:w-1/2">
 
                     <h3 className="p-4 rounded-xl border-2 border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 text-3xl font-semibold font-serif">
