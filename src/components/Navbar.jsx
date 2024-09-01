@@ -104,22 +104,22 @@ const toggleDarkMode = () => {
 
         {/* Items Menu */}
         <div className="container max-w-6xl mx-auto relative">
-          <div className={`absolute w-full -z-10 md:hidden ${menuState ? 'top-0' : '-top-[500px]'} duration-300 `} id="menu">
+          <div className={`absolute w-full -z-10 md:hidden ${menuState ? 'top-0' : '-top-[500px]'} duration-[400ms] `} id="menu">
             <div id="menu-back-con t" className=" rounded-2xl">
               <div className="flex flex-col bg-black/95 p-20 rounded-b-[10rem] space-y-8 items-center">
-                <Link to="/" className="group text-white font-bold text-lg hover:scale-125 duration-300">
+                <Link to="/" className="group text-white font-bold text-lg hover:scale-125 duration-300" onClick={ () => setMenuState(false)}>
                   Početna
                   <div className={ path==='/' ? 'border-b-2 border-white mx-2' : '' }></div>
                 </Link>
-                <Link to="/info" className="group text-white font-bold text-lg hover:scale-125 duration-300">
+                <Link to="/info" className="group text-white font-bold text-lg hover:scale-125 duration-300" onClick={ () => setMenuState(false)}>
                   Informacije
                   <div className={ path==='/info' ? 'border-b-2 border-white mx-2' : '' }></div>
                 </Link>
-                <Link to="/buy" className="group text-white font-bold text-lg hover:scale-125 duration-300">
+                <Link to="/buy" className="group text-white font-bold text-lg hover:scale-125 duration-300" onClick={ () => setMenuState(false)}>
                   Kupite
                   <div className={ path==='/buy' ? 'border-b-2 border-white mx-2' : '' }></div>
                 </Link>
-                <Link to="/contact" className="group text-white font-bold text-lg hover:scale-125 duration-300">
+                <Link to="/contact" className="group text-white font-bold text-lg hover:scale-125 duration-300" onClick={ () => setMenuState(false)}>
                   Kontakt
                   <div className={ path==='/contact' ? 'border-b-2 border-white mx-2' : '' }></div>
                 </Link>
