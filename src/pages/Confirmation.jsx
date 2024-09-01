@@ -31,7 +31,7 @@ const Confirmation = () => {
 
 <h2 className="text-4xl font-bold md:text-5xl my-6 md:my-12">Vaši Podatci</h2>
 
-<div className="flex flex-col space-y-12 md:flex-row md:space-y-0 md:space-x-10 w-full">
+<div className="flex flex-col space-y-12 lg:flex-row lg:space-y-0 lg:space-x-10 w-full">
 
   {/* Shipping data */}
   <div className="p-6 rounded-lg flex flex-col space-y-6 items-center bg-white dark:bg-slate-900 shadow-xl w-full justify-between">
@@ -43,40 +43,59 @@ const Confirmation = () => {
 
     <div className={`text-2xl mx-5 w-full flex flex-col space-y-3 items-start h-full justify-start ${shippingData.name == '' ? 'hidden' : '' } ` } >
 
-      <p>
-        Ime:  {shippingData.name}
+      <p className='flex justify-between gap-5 w-full border-b-2 border-slate-700 p-3'>
+        Ime:  <span className='font-bold '>
+                  {shippingData.name}
+              </span>
+
       </p>
 
-      <p>
-        Prezime:  {shippingData.surname}
+      <p className='flex justify-between gap-5 w-full border-b-2 border-slate-700 p-3'>
+        Prezime:  <span className='font-bold '>
+                  {shippingData.surname}
+              </span>
       </p>
 
-      <p>
-        Email:  {shippingData.email}
+      <p className='flex justify-between gap-5 w-full border-b-2 border-slate-700 p-3'>
+        Email:  <span className='font-bold '>
+                  {shippingData.email}
+              </span>
       </p>
 
-      <p>
-        Broj telefona:  {shippingData.phone}
+      <p className='flex justify-between gap-5 w-full border-b-2 border-slate-700 p-3'>
+        Broj telefona:  <span className='font-bold '>
+                  {shippingData.phone}
+              </span>
       </p>
 
-      <p>
-        Adresa:  {shippingData.address}
+      <p className='flex justify-between gap-5 w-full border-b-2 border-slate-700 p-3'>
+        Adresa:  <span className='font-bold '>
+                  {shippingData.address}
+              </span>
       </p>
 
-      <p>
-        Država:  {shippingData.country}
+      <p className='flex justify-between gap-5 w-full border-b-2 border-slate-700 p-3'>
+        Država:  <span className='font-bold '>
+                  {shippingData.country}
+              </span>
       </p>
 
-      <p>
-        Grad:  {shippingData.city}
+      <p className='flex justify-between gap-5 w-full border-b-2 border-slate-700 p-3'>
+        Grad:  <span className='font-bold '>
+                  {shippingData.city}
+              </span>
       </p>
 
-      <p>
-        Poštanski broj:  {shippingData.zip}
+      <p className='flex justify-between gap-5 w-full border-b-2 border-slate-700 p-3'>
+        Poštanski broj: <span className='font-bold '>
+                  {shippingData.zip}
+              </span>
       </p>
 
-      <p>
-        Poruka:  {shippingData.message}
+      <p className='flex justify-between gap-5 w-full border-b-2 border-slate-700 p-3'>
+        Poruka:  <span className='font-bold '>
+                  {shippingData.message}
+              </span>
       </p>
 
     </div>
@@ -108,16 +127,26 @@ const Confirmation = () => {
 
     <div className={`text-2xl mx-5 md:text-3xl w-full flex flex-col space-y-3 items-start h-full justify-start ${cartData.totalPrice == 0 ? 'hidden' : '' } ` } >
 
-      <p className={`font-serif ${cartData.amount25 == 0 ? 'hidden' : ''}`} >
-        Earth Soul 25g:  {cartData.amount25} * 90 KM
+      <p className={`font-serif h-24 flex justify-between gap-5 w-full border-b-2 border-slate-700 p-3 ${cartData.amount25 == 0 ? 'hidden' : ''}`} >
+        Earth Soul 25g:  <span className='font-sans font-bold'>
+            {cartData.amount25} 
+          </span>
       </p>
 
-      <p className={`font-serif ${cartData.amount50 == 0 ? 'hidden' : ''}`} >
-        Earth Soul 50g:  {cartData.amount50} * 150 KM
+      <p className={`font-serif h-24 flex justify-between items-center gap-5 w-full border-b-2 border-slate-700 p-3 ${cartData.amount50 == 0 ? 'hidden' : ''}`} >
+        Earth Soul 50g:  <span className='font-sans font-bold'>
+            {cartData.amount50} 
+          </span>
       </p>
 
-      <p>
-        Cijena:  {cartData.totalPrice} KM <span className='font-extralight text-lg text-black/60 dark:text-white/60 '>+ dostava</span>
+      {/* <p className={`h-24 flex justify-between items-center gap-5 w-full border-b-2 border-slate-700 p-3 font-bold ${cartData.totalPrice == 0 ? 'hidden' : ''}`} >
+        {getCartData().amount25} * 90 KM + {getCartData().amount50} * 150 KM
+      </p> */}
+
+      <p className='flex justify-between items-center gap-5 w-full border-b-2 border-slate-700 p-3 h-24'>
+        Cijena: <span className='font-bold'>
+          {cartData.totalPrice} KM <div className='font-extralight text-lg text-black/60 dark:text-white/60 '>+ dostava</div>
+          </span> 
       </p>
 
       
