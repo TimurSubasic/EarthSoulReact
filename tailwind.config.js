@@ -8,6 +8,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      screens: {
+        sm: '535px'
+      },
       animation: {
         "spin-slow": "spin 3s linear infinite",
         wiggle: "wiggle 1.5s ease-in-out infinite",
