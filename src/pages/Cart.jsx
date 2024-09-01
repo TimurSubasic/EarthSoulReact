@@ -50,13 +50,13 @@ const Cart = () => {
     }
 
 
-    const currentCart = getCartData()
+    const cartData = getCartData()
     
 
 
-    const [amount25, setAmount25] = useState(currentCart.amount25)
+    const [amount25, setAmount25] = useState(cartData.amount25)
 
-    const [amount50, setAmount50] = useState(currentCart.amount50)
+    const [amount50, setAmount50] = useState(cartData.amount50)
 
 
     const minus25 = () => {

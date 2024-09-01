@@ -1,7 +1,64 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { useState } from 'react';
+import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
+import { getCartData, updateCartData } from '../utils/shippingData';
 
 const Info = () => {
+
+  const cartData = getCartData();
+
+  const [amount25, setAmount25] = useState(cartData.amount25);
+  const [amount50, setAmount50] = useState(cartData.amount50);
+  
+  // Function to calculate price
+  const getPrice = (newAmount25 = amount25, newAmount50 = amount50) => {
+    return (newAmount25 * 90) + (newAmount50 * 150);
+  };
+  
+  // Function to update cart data
+  const handleCartUpdateData = (newAmount25 = amount25, newAmount50 = amount50) => {
+    updateCartData({
+      amount25: newAmount25,
+      amount50: newAmount50,
+      totalPrice: getPrice(newAmount25, newAmount50),
+    });
+  };
+  
+  // Plus and minus functions for amount25
+  const plus25 = () => {
+    const newAmount25 = amount25 + 1;
+    setAmount25(newAmount25);
+    handleCartUpdateData(newAmount25, amount50);
+  };
+  
+  const minus25 = () => {
+    if (amount25 > 0) {
+      const newAmount25 = amount25 - 1;
+      setAmount25(newAmount25);
+      handleCartUpdateData(newAmount25, amount50);
+    }
+  };
+  
+  // Plus and minus functions for amount50
+  const plus50 = () => {
+    const newAmount50 = amount50 + 1;
+    setAmount50(newAmount50);
+    handleCartUpdateData(amount25, newAmount50);
+  };
+  
+  const minus50 = () => {
+    if (amount50 > 0) {
+      const newAmount50 = amount50 - 1;
+      setAmount50(newAmount50);
+      handleCartUpdateData(amount25, newAmount50);
+    }
+  };
+  
+
+
+
+
+
     return (
 
 
@@ -385,6 +442,49 @@ const Info = () => {
                         Doza za jednu osobu 2 mjeseca
                     </p>
 
+                    {/* cart Add */}
+                    <div className=" border-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800 rounded-lg p-5 ">
+
+                      <h2 className='font-semibold text-xl lg:text-2xl text-center mb-3 '>
+                        Dodajte u Korpu
+                      </h2>
+
+            
+            {/* buttons */}
+            <div className="flex space-x-4 items-center">
+
+
+                {/* + 25 */}
+                <div onClick={ () => plus25() } className='h-12 w-12 cursor-pointer'>
+                    <FaPlusCircle className='h-full w-full bg-green-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-green-500/40 hover:shadow-xl hover:shadow-green-500/40 duration-300' />
+                </div>
+
+
+                {/* amount */}
+                <div className="flex items-center justify-center h-16 w-16 border-2 rounded-full border-gray-300 bg-white dark:border-slate-700 dark:bg-slate-900">
+                    <p id="amount25" className="font-bold text-2xl">
+                        {
+                            cartData.amount25
+                        }
+                    </p>
+                </div>
+
+
+                {/* - 25 */}
+                <div onClick={ minus25 } className='h-12 w-12 cursor-pointer'>
+                    <FaMinusCircle className='h-full w-full bg-red-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-red-500/40 hover:shadow-xl hover:shadow-red-500/40 duration-300' />
+                </div>
+                
+
+
+            </div>
+
+
+            
+        
+        
+        </div>
+
                 </div>
 
 
@@ -404,6 +504,51 @@ const Info = () => {
                     <p className="text-xl text-center lg:text-2xl">
                         Doza za jednu osobu 4 mjeseca
                     </p>
+
+
+                    {/* cart Add */}
+                    <div className=" border-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800 rounded-lg p-5 ">
+
+                      <h2 className='font-semibold text-xl lg:text-2xl text-center mb-3 '>
+                        Dodajte u Korpu
+                      </h2>
+
+            
+            {/* buttons */}
+            <div className="flex space-x-4 items-center">
+
+
+                {/* + 50 */}
+                <div onClick={ () => plus50() } className='h-12 w-12 cursor-pointer'>
+                    <FaPlusCircle className='h-full w-full bg-green-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-green-500/40 hover:shadow-xl hover:shadow-green-500/40 duration-300' />
+                </div>
+
+
+                {/* amount */}
+                <div className="flex items-center justify-center h-16 w-16 border-2 rounded-full border-gray-300 bg-white dark:border-slate-700 dark:bg-slate-900">
+                    <p id="amount25" className="font-bold text-2xl">
+                        {
+                            cartData.amount50
+                        }
+                    </p>
+                </div>
+
+
+                {/* - 50 */}
+                <div onClick={ () => minus50() } className='h-12 w-12 cursor-pointer'>
+                    <FaMinusCircle className='h-full w-full bg-red-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-red-500/40 hover:shadow-xl hover:shadow-red-500/40 duration-300' />
+                </div>
+                
+
+
+            </div>
+
+
+            
+        
+        
+        </div>
+                    
 
                 </div>
 
