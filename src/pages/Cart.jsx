@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { MdClose } from "react-icons/md";
 import { Link, useNavigate } from 'react-router-dom';
 import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
-import { getShippingData, updateCartData } from '../utils/shippingData';
+import { getCartData, getShippingData, updateCartData } from '../utils/shippingData';
 
 const Cart = () => {
 
@@ -49,12 +49,14 @@ const Cart = () => {
 
     }
 
+
+    const currentCart = getCartData()
     
 
 
-    const [amount25, setAmount25] = useState(0)
+    const [amount25, setAmount25] = useState(currentCart.amount25)
 
-    const [amount50, setAmount50] = useState(0)
+    const [amount50, setAmount50] = useState(currentCart.amount50)
 
 
     const minus25 = () => {
