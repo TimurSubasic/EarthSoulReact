@@ -4,7 +4,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { HiChevronDoubleDown } from "react-icons/hi";
 import { FaMoon, FaSun } from "react-icons/fa";
 
-function Navbar() {
+// eslint-disable-next-line react/prop-types
+function Navbar({ darkMode, toggleDarkMode }) {
 
 
   const location = useLocation()
@@ -13,27 +14,7 @@ function Navbar() {
 
   const [menuState, setMenuState] = useState(false)
 
-  const [darkMode, setDarkMode] = useState(false)
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        setDarkMode(true);
-        document.documentElement.classList.add('dark');
-    }
-}, [])
-
-
-const toggleDarkMode = () => {
-  if (darkMode) {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-  } else {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-  }
-  setDarkMode(!darkMode);
-}
 
 
 

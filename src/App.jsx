@@ -8,6 +8,7 @@ import Buy from './pages/Buy';
 import ScrollToTop from './components/ScrollToTop';
 import Cart from './pages/Cart';
 import Confirmation from './pages/Confirmation';
+import { useEffect, useState } from 'react';
 
 function App() {
   const location = useLocation();
@@ -15,11 +16,33 @@ function App() {
   // Define the route paths where the Navbar and Footer should not be displayed
   const noNavFooterPaths = ['/buy/cart', '/buy/confirmation'];
 
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      setDarkMode(true);
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    if (darkMode) {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+    setDarkMode(!darkMode);
+  };
+
+
   return (
     <div className='flex flex-col min-h-[100vh] bg-gray-200 dark:bg-slate-800 dark:text-white duration-300 '>
       
       {/* Conditionally render Navbar */}
-      {!noNavFooterPaths.includes(location.pathname) && <Navbar />}
+      {!noNavFooterPaths.includes(location.pathname) && <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode}  />}
       
       <main className='flex-1 mt-[74px]'>
         <Routes>
