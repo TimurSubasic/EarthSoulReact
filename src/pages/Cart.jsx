@@ -116,10 +116,6 @@ const Cart = () => {
 {/* images */}
 <div className="flex justify-center items-center relative cursor-grab active:cursor-grabbing  ">
 
-    {/* blur left */}
-    <div className="h-96 md:h-[425px] -mt-24 w-24 blur-lg absolute -left-4 z-50 bg-gray-100 md:w-44 lg:w-60 dark:bg-slate-800 overflow-hidden hidden"></div>
-    {/* blur right */}
-    <div className="h-96 md:h-[425px] -mt-24 w-24 blur-lg absolute -right-4 z-50 bg-gray-100 md:w-44 lg:w-60 dark:bg-slate-800 overflow-hidden hidden"></div>
 
     {/* snap scroll */}
     <div id="scroll-container" className="relative w-full flex gap-6 mx-4 snap-x snap-mandatory overflow-x-auto pb-14 cursor-grab active:cursor-grabbing">
