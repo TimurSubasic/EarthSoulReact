@@ -74,7 +74,7 @@ const Info = () => {
     <div className="flex flex-col space-y-12 md:flex-row md:space-y-0 md:space-x-10">
 
       {/* Direct Usage */}
-      <div className="p-6 rounded-lg flex flex-col space-y-6 items-center bg-white dark:bg-slate-900 shadow-xl">
+      <div className="p-6 rounded-lg flex flex-col space-y-6 items-center bg-white dark:bg-slate-900 shadow-xl w-full">
 
         <h3 className="p-4 rounded-xl border-2 border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 text-3xl font-semibold">
           Direktno
@@ -89,7 +89,7 @@ const Info = () => {
       </div>
 
       {/* With Water */}
-      <div className="p-6 rounded-lg flex flex-col space-y-6 items-center bg-white dark:bg-slate-900 shadow-xl">
+      <div className="p-6 rounded-lg flex flex-col space-y-6 items-center bg-white dark:bg-slate-900 shadow-xl w-full">
 
         <h3 className="p-4 rounded-xl border-2 border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 text-3xl font-semibold">
           Sa vodom

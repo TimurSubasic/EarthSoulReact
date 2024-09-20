@@ -1,20 +1,103 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { getCartData, getShippingData } from '../utils/shippingData';
 import { Link } from 'react-router-dom';
 
 const Confirmation = () => {
 
 
+  // email js
+
+  const mainSection = useRef(null);
+
+  const loadingSection = useRef(null);
+
+  const successSection = useRef(null);
+
+  const failSection = useRef(null);
+
+
+  const sendEmail = () => {
+    // Send only the `message` as it's required in your template
+
+    // hide content
+    mainSection.current.classList.toggle('hidden');
+
+    // start loading
+    loadingSection.current.classList.toggle('hidden');
+
+
+    emailjs
+      .send(
+        'service_9gatelz',       //  your service ID
+        'template_h4ws01g',      //  your template ID
+        { message },             // Send the message string in an object
+        'GOQrHPyK5_JTNQBrI'      //  your public key
+      )
+      .then(
+        () => {
+          // SUCCESS
+
+          //hide loading
+          loadingSection.current.classList.toggle('hidden');
+
+          //show success
+          successSection.current.classList.toggle('hidden');
+        },
+
+        // eslint-disable-next-line no-unused-vars
+        (error) => {
+          // FAIL
+
+          //hide loading
+          loadingSection.current.classList.toggle('hidden');
+
+          //show fail
+          failSection.current.classList.toggle('hidden');
+        }
+      );
+  };
+
+  //email js
+
+
     const shippingData = getShippingData()
 
     const cartData = getCartData()
+
+    const message = `
+    Ime i Prezime: ${shippingData.name} ${shippingData.surname}
+
+    Email: ${shippingData.email}
+
+    Broj telefona: ${shippingData.phone}
+
+    Drzava: ${shippingData.country}
+
+    Grad: ${shippingData.city}
+
+    Adresa: ${shippingData.address}
+
+    Postanski broj: ${shippingData.zip}
+
+    
+    Earth Soul 25g: ${cartData.amount25}
+
+    Earth Soul 50g: ${cartData.amount50}
+
+    Ukupna cijena: ${cartData.totalPrice} KM
+
+    
+
+    Poruka:
+    ${shippingData.message} `;
 
     const getBuyButton = () => {
 
         if (shippingData.name != '' && cartData.totalPrice != 0) {
 
-            return <button className='text-3xl text-center py-5 w-full bg-cyan-600 rounded-xl text-white font-serif uppercase shadow-lg hover:shadow-cyan-600/30 duration-300 my-8 '>
+            return <button onClick={sendEmail} className='text-3xl text-center py-5 w-full bg-cyan-600 rounded-xl text-white font-serif uppercase shadow-lg hover:shadow-cyan-600/30 duration-300 my-8 '>
                 naručite
             </button>
         }
@@ -24,8 +107,9 @@ const Confirmation = () => {
     return (
         
 
+<div className='min-h-screen'>  
 
-<section className='container max-w-6xl mx-auto p-5 -mt-16'>
+<section ref={mainSection} className='container max-w-6xl mx-auto p-5 -mt-16'>
 
 <div className="flex flex-col justify-center items-center border-2 border-gray-300 dark:border-slate-700 rounded-lg shadow-xl">
 
@@ -191,6 +275,137 @@ const Confirmation = () => {
 
 
 
+{/* loading */}
+
+<section ref={loadingSection} id="loading" className="hidden">
+    <div className="h-screen flex items-center justify-center m-5">
+            
+            <img src="/images/loading-gif.gif" className="h-1/4 animate-spin-slow" alt="" />
+
+    </div>
+</section>
+
+
+
+{/* success */}
+<section ref={successSection} className="hidden">
+  <div className="min-h-screen flex items-center justify-center m-5">
+    {/* centered items */}
+    <div className="flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-12">
+      {/* heading and image */}
+      <div className="flex flex-col space-y-6 items-center justify-center border-b-2 border-black p-4 dark:border-white md:border-b-0 md:border-r-2 md:p-5">
+        <h3 className="text-4xl font-bold font-serif capitalize lg:text-5xl text-center">
+          Uspješno ste naručili
+        </h3>
+
+        <img
+          src="/images/transparent-shila-main.png"
+          className="w-[360px] mx-5 lg:w-[550px]"
+          alt=""
+        />
+
+        <h3 className="text-4xl font-bold font-serif capitalize lg:text-5xl text-center">
+          earth soul
+        </h3>
+      </div>
+
+      {/* Buttons */}
+      <div className="flex flex-col space-y-6 items-center md:justify-between md:py-12">
+        <Link
+          to="/"
+          className="text-lg font-semibold px-6 py-4 rounded-xl bg-white border-2 border-gray-300 dark:bg-slate-900 dark:border-slate-700 text-center w-56 hover:scale-110 shadow-none hover:shadow-lg shadow-black dark:shadow-gray-500 duration-300"
+        >
+          Početna
+        </Link>
+
+        <Link
+          to="/info"
+          className="text-lg font-semibold px-6 py-4 rounded-xl bg-white border-2 border-gray-300 dark:bg-slate-900 dark:border-slate-700 text-center w-56 hover:scale-110 shadow-none hover:shadow-lg shadow-black dark:shadow-gray-500 duration-300"
+        >
+          Informacije
+        </Link>
+
+        <Link
+          to="/buy"
+          className="text-lg font-semibold px-6 py-4 rounded-xl bg-white border-2 border-gray-300 dark:bg-slate-900 dark:border-slate-700 text-center w-56 hover:scale-110 shadow-none hover:shadow-lg shadow-black dark:shadow-gray-500 duration-300"
+        >
+          Kupite Još
+        </Link>
+
+        <Link
+          to="/contact"
+          className="text-lg font-semibold px-6 py-4 rounded-xl bg-white border-2 border-gray-300 dark:bg-slate-900 dark:border-slate-700 text-center w-56 hover:scale-110 shadow-none hover:shadow-lg shadow-black dark:shadow-gray-500 duration-300"
+        >
+          Kontakt
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{/* Fail */}
+<section ref={failSection} className="hidden">
+  <div className="min-h-screen flex items-center justify-center m-5">
+    {/* centered items */}
+    <div className="flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-12">
+      {/* heading and image */}
+      <div className="flex flex-col space-y-6 items-center justify-center border-b-2 border-black p-4 dark:border-white md:border-b-0 md:border-r-2 md:p-5">
+        <h3 className="text-3xl font-bold font-serif capitalize lg:text-4xl text-center">
+          Došlo je do greške
+        </h3>
+
+        <img
+          src="/images/transparent-shila-main.png"
+          className="w-[360px] mx-5 lg:w-[550px]"
+          alt=""
+        />
+
+        <h3 className="text-2xl font-bold font-serif capitalize lg:text-4xl text-center">
+          Molimo javite se na kontakt
+        </h3>
+      </div>
+
+      {/* Buttons */}
+      <div className="flex flex-col space-y-6 items-center md:justify-between md:py-12">
+        <Link
+          to="/contact"
+          className="text-lg font-semibold px-6 py-4 rounded-xl bg-white border-2 border-gray-300 dark:bg-slate-900 dark:border-slate-700 text-center w-56 hover:scale-110 hover:shadow-lg shadow-black dark:shadow-gray-500 duration-300 mb-8 scale-125 shadow-2xl"
+        >
+          Kontakt
+        </Link>
+
+        <Link
+          to="/"
+          className="text-lg font-semibold px-6 py-4 rounded-xl bg-white border-2 border-gray-300 dark:bg-slate-900 dark:border-slate-700 text-center w-56 hover:scale-110 shadow-none hover:shadow-lg shadow-black dark:shadow-gray-500 duration-300"
+        >
+          Početna
+        </Link>
+
+        <Link
+          to="/info"
+          className="text-lg font-semibold px-6 py-4 rounded-xl bg-white border-2 border-gray-300 dark:bg-slate-900 dark:border-slate-700 text-center w-56 hover:scale-110 shadow-none hover:shadow-lg shadow-black dark:shadow-gray-500 duration-300"
+        >
+          Informacije
+        </Link>
+
+        <Link
+          to="/buy"
+          className="text-lg font-semibold px-6 py-4 rounded-xl bg-white border-2 border-gray-300 dark:bg-slate-900 dark:border-slate-700 text-center w-56 hover:scale-110 shadow-none hover:shadow-lg shadow-black dark:shadow-gray-500 duration-300"
+        >
+          Pokušajte ponovo
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+</div>
 
 
     );
