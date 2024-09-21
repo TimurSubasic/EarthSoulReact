@@ -294,7 +294,7 @@ const Confirmation = () => {
     <div className="flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-12">
       {/* heading and image */}
       <div className="flex flex-col space-y-6 items-center justify-center border-b-2 border-black p-4 dark:border-white md:border-b-0 md:border-r-2 md:p-5">
-        <h3 className="text-4xl font-bold font-serif font-semibold capitalize lg:text-5xl text-center">
+        <h3 className="text-4xl font-bold font-serif capitalize lg:text-5xl text-center">
           Uspješno ste naručili
         </h3>
 
@@ -304,7 +304,7 @@ const Confirmation = () => {
           alt=""
         />
 
-        <h3 className="text-4xl font-bold font-serif font-semibold capitalize lg:text-5xl text-center">
+        <h3 className="text-4xl font-bold font-serif capitalize lg:text-5xl text-center">
           earth soul
         </h3>
       </div>
@@ -351,7 +351,7 @@ const Confirmation = () => {
     <div className="flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-12">
       {/* heading and image */}
       <div className="flex flex-col space-y-6 items-center justify-center border-b-2 border-black p-4 dark:border-white md:border-b-0 md:border-r-2 md:p-5">
-        <h3 className="text-3xl font-bold font-serif font-semibold capitalize lg:text-4xl text-center">
+        <h3 className="text-3xl font-bold font-serif capitalize lg:text-4xl text-center">
           Došlo je do greške
         </h3>
 
@@ -361,7 +361,7 @@ const Confirmation = () => {
           alt=""
         />
 
-        <h3 className="text-2xl font-bold font-serif font-semibold capitalize lg:text-4xl text-center">
+        <h3 className="text-2xl font-bold font-serif capitalize lg:text-4xl text-center">
           Molimo javite se na kontakt
         </h3>
       </div>
