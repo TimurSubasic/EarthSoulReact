@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { MdClose } from "react-icons/md";
 import { Link, useNavigate } from 'react-router-dom';
 import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
@@ -86,6 +86,33 @@ const Cart = () => {
 
 
 
+  const galleryRef = useRef(null); // Reference to the gallery container
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const startDragging = (e) => {
+    setIsDragging(true);
+    setStartX(e.pageX - galleryRef.current.offsetLeft); // Mouse position relative to the container
+    setScrollLeft(galleryRef.current.scrollLeft); // Get current scroll position
+    // Disable snapping during drag
+    galleryRef.current.style.scrollSnapType = 'none';
+  };
+
+  const stopDragging = () => {
+    setIsDragging(false);
+    // Re-enable snapping after drag
+    galleryRef.current.style.scrollSnapType = 'x mandatory';
+  };
+
+  const onDragging = (e) => {
+    if (!isDragging) return;
+    e.preventDefault(); // Prevent text selection while dragging
+    const x = e.pageX - galleryRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust scrolling speed
+    galleryRef.current.scrollLeft = scrollLeft - walk;
+  };
+
 
 
     return (
@@ -118,46 +145,59 @@ const Cart = () => {
 
 
     {/* snap scroll */}
-    <div id="scroll-container" className="relative w-full flex gap-6 mx-4 snap-x snap-mandatory overflow-x-auto pb-14 cursor-grab active:cursor-grabbing">
+    <div
+      id="scroll-container"
+      ref={galleryRef}
+      onMouseDown={startDragging}
+      onMouseLeave={stopDragging}
+      onMouseUp={stopDragging}
+      onMouseMove={onDragging}
+      className="relative w-full flex gap-6 mx-4 overflow-x-auto pb-14 cursor-grab active:cursor-grabbing select-none"
+    >
+      {/* Empty div to pad the left side */}
+      <div className="shrink-0 w-20 md:w-44 lg:w-56"></div>
 
-        <div className="snap-center shrink-0">
-            <div className="shrink-0 w-20 md:w-44 lg:w-56"></div>
-        </div>
-
-        
-
-        <div className="snap-center shrink-0">
-          <img className="shrink-0 w-64 h-64 md:w-80 md:h-80 rounded-lg shadow-xl bg-white selectDisable" src="/images/shila-main.jpg"/>
-        </div>
-
-        <div className="snap-center shrink-0">
-            <img className="shrink-0 w-64 h-64 md:w-80 md:h-80 rounded-lg shadow-xl bg-white selectDisable" src="/images/shila-25g.png"/>
-        </div>
-
-        <div className="snap-center shrink-0">
-            <img className="shrink-0 w-64 h-64 md:w-80 md:h-80 rounded-lg shadow-xl bg-white selectDisable" src="/images/ShilajitPic.png"/>
-          </div>
-
-        <div className="snap-center shrink-0">
-          <img className="shrink-0 w-64 h-64 md:w-80 md:h-80 rounded-lg shadow-xl bg-white selectDisable" src="/images/shila-planina.jpg"/>
-        </div>
-
-        <div className="snap-center shrink-0">
-            <img className="shrink-0 w-64 h-64 md:w-80 md:h-80 rounded-lg shadow-xl bg-white selectDisable" src="/images/shila-jezero.jpg"/>
-        </div>
-
-        <div className="snap-center shrink-0">
-            <img className="shrink-0 w-64 h-64 md:w-80 md:h-80 rounded-lg shadow-xl bg-white selectDisable" src="/images/shila-stablo.png"/>
-        </div>
-
-
-        <div className="snap-center shrink-0">
-            <div className="shrink-0 w-20 md:w-44 lg:w-56"></div>
-        </div>
-        
-
-
+      {/* Image Gallery */}
+      <div className="snap-center shrink-0">
+        <img
+          className="shrink-0 w-64 h-64 md:w-80 md:h-80 rounded-lg shadow-xl bg-white selectDisable"
+          src="/images/shila-main.jpg"
+        />
       </div>
+      <div className="snap-center shrink-0">
+        <img
+          className="shrink-0 w-64 h-64 md:w-80 md:h-80 rounded-lg shadow-xl bg-white selectDisable"
+          src="/images/shila-25g.png"
+        />
+      </div>
+      <div className="snap-center shrink-0">
+        <img
+          className="shrink-0 w-64 h-64 md:w-80 md:h-80 rounded-lg shadow-xl bg-white selectDisable"
+          src="/images/ShilajitPic.png"
+        />
+      </div>
+      <div className="snap-center shrink-0">
+        <img
+          className="shrink-0 w-64 h-64 md:w-80 md:h-80 rounded-lg shadow-xl bg-white selectDisable"
+          src="/images/shila-planina.jpg"
+        />
+      </div>
+      <div className="snap-center shrink-0">
+        <img
+          className="shrink-0 w-64 h-64 md:w-80 md:h-80 rounded-lg shadow-xl bg-white selectDisable"
+          src="/images/shila-jezero.jpg"
+        />
+      </div>
+      <div className="snap-center shrink-0">
+        <img
+          className="shrink-0 w-64 h-64 md:w-80 md:h-80 rounded-lg shadow-xl bg-white selectDisable"
+          src="/images/shila-stablo.png"
+        />
+      </div>
+
+      {/* Empty div to pad the right side */}
+      <div className="shrink-0 w-20 md:w-44 lg:w-56"></div>
+    </div>
 
     
 
