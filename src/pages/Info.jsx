@@ -428,7 +428,7 @@ const Info = () => {
                 {/* {/* 25g price */} 
                 <div className="p-6 rounded-lg flex flex-col space-y-8 items-center justify-center bg-white dark:bg-slate-900 shadow-xl md:w-1/2">
 
-                    <h3 className="p-4 rounded-xl border-2 border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 text-3xl font-semibold font-serif font-semibold">
+                    <h3 className="p-4 rounded-xl border-2 border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 text-3xl font-semibold font-serif">
                         Earth Soul 25g
                     </h3>
 
@@ -491,7 +491,7 @@ const Info = () => {
                 {/* {/* 50g price */} 
                 <div className="p-6 rounded-lg flex flex-col space-y-8 items-center justify-center bg-white dark:bg-slate-900 shadow-xl md:w-1/2">
 
-                    <h3 className="p-4 rounded-xl border-2 border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 text-3xl font-semibold font-serif font-semibold">
+                    <h3 className="p-4 rounded-xl border-2 border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 text-3xl font-serif font-semibold">
                         Earth Soul 50g
                     </h3>
 
