@@ -25,7 +25,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
         {/* Navbar */}
         <div className="bg-white/35 dark:bg-black/45 h-[75px] max-h-[75px] ">
           <nav className="container max-w-6xl mx-auto flex justify-between items-center p-5 z-50">
-            <div className="font-serif text-2xl font-semibold">
+            <div className="font-serif font-extrabold text-2xl">
               <Link to='/'>Earth Soul</Link>
             </div>
 

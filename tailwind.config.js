@@ -46,7 +46,8 @@ module.exports = {
       },
       fontFamily: {
         static: ["Sedan SC", "static"],
-        sans: ["Open Sans", "sans-serif"]
+        sans: ["Open Sans", "sans-serif"],
+        serif: ["Playfair Display SC", "serif"]
       }
     },
   },

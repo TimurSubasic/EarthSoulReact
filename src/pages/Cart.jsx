@@ -217,7 +217,7 @@ const Cart = () => {
 
             <div className="flex flex-col space-y-1 items-center justify-center md:items-start">
 
-                <h4 className="font-serif text-2xl">
+                <h4 className="font-serif font-semibold text-2xl">
                     Earth Soul 25g
                 </h4>
 
@@ -290,7 +290,7 @@ const Cart = () => {
 
             <div className="flex flex-col space-y-1 items-center justify-center md:items-start">
 
-                <h4 className="font-serif text-2xl">
+                <h4 className="font-serif font-semibold text-2xl">
                     Earth Soul 50g
                 </h4>
 
@@ -363,7 +363,7 @@ const Cart = () => {
 
         <div className="flex flex-col space-y-1 ">
 
-            <h4 className="font-serif text-2xl">
+            <h4 className="font-serif font-semibold text-2xl">
                 Cijena
             </h4>
 
@@ -397,7 +397,7 @@ const Cart = () => {
 
 
 
-<button onClick={ handleCartUpdateData } id="cart-next" type="button" className="text-3xl text-center py-5 w-full bg-cyan-600 rounded-xl text-white font-serif uppercase shadow-lg hover:shadow-cyan-600/30 duration-300 ">
+<button onClick={ handleCartUpdateData } id="cart-next" type="button" className="text-3xl text-center py-5 w-full bg-cyan-600 rounded-xl text-white font-serif font-semibold uppercase shadow-lg hover:shadow-cyan-600/30 duration-300 ">
         nastavite
 </button>
 

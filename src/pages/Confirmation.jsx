@@ -97,7 +97,7 @@ const Confirmation = () => {
 
         if (shippingData.name != '' && cartData.totalPrice != 0) {
 
-            return <button onClick={sendEmail} className='text-3xl text-center py-5 w-full bg-cyan-600 rounded-xl text-white font-serif uppercase shadow-lg hover:shadow-cyan-600/30 duration-300 my-8 '>
+            return <button onClick={sendEmail} className='text-3xl text-center py-5 w-full bg-cyan-600 rounded-xl text-white font-serif font-semibold uppercase shadow-lg hover:shadow-cyan-600/30 duration-300 my-8 '>
                 naručite
             </button>
         }
@@ -193,7 +193,7 @@ const Confirmation = () => {
     </div>
 
 
-    <Link to='/buy' className='text-3xl text-center py-5 w-full bg-yellow-400 rounded-xl text-black font-serif uppercase shadow-lg hover:shadow-yellow-400/30 duration-300'>
+    <Link to='/buy' className='text-3xl text-center py-5 w-full bg-yellow-400 rounded-xl text-black font-serif font-semibold uppercase shadow-lg hover:shadow-yellow-400/30 duration-300'>
         Uredi
     </Link>
 
@@ -211,7 +211,7 @@ const Confirmation = () => {
 
     <div className={`text-2xl sm:text-3xl mx-5 w-full flex flex-col space-y-12 items-start h-full justify-start ${cartData.totalPrice == 0 ? 'hidden' : '' } ` } >
 
-      <p className={`font-serif h-24 flex justify-between items-center gap-5 w-full border-b-2 border-gray-400 dark:border-slate-500 p-3 ${cartData.amount25 == 0 ? 'hidden' : ''}`} >
+      <p className={`font-serif font-semibold h-24 flex justify-between items-center gap-5 w-full border-b-2 border-gray-400 dark:border-slate-500 p-3 ${cartData.amount25 == 0 ? 'hidden' : ''}`} >
         Earth Soul 25g:  
           <div className='font-sans font-bold flex flex-col space-y-2 items-center'>
             {cartData.amount25} 
@@ -223,7 +223,7 @@ const Confirmation = () => {
           </div>
       </p>
 
-      <p className={`font-serif h-24 flex justify-between items-center gap-5 w-full border-b-2 border-gray-400 dark:border-slate-500 p-3 ${cartData.amount50 == 0 ? 'hidden' : ''}`} >
+      <p className={`font-serif font-semibold h-24 flex justify-between items-center gap-5 w-full border-b-2 border-gray-400 dark:border-slate-500 p-3 ${cartData.amount50 == 0 ? 'hidden' : ''}`} >
         Earth Soul 50g:  
         <div className='font-sans font-bold flex flex-col space-y-2 items-center'>
             {cartData.amount50} 
@@ -257,7 +257,7 @@ const Confirmation = () => {
     </div>
 
 
-    <Link to='/buy/cart' className='text-3xl text-center py-5 w-full bg-yellow-400 rounded-xl text-black font-serif uppercase shadow-lg hover:shadow-yellow-400/30 duration-300'>
+    <Link to='/buy/cart' className='text-3xl text-center py-5 w-full bg-yellow-400 rounded-xl text-black font-serif font-semibold uppercase shadow-lg hover:shadow-yellow-400/30 duration-300'>
         Uredi
     </Link>
 
@@ -294,7 +294,7 @@ const Confirmation = () => {
     <div className="flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-12">
       {/* heading and image */}
       <div className="flex flex-col space-y-6 items-center justify-center border-b-2 border-black p-4 dark:border-white md:border-b-0 md:border-r-2 md:p-5">
-        <h3 className="text-4xl font-bold font-serif capitalize lg:text-5xl text-center">
+        <h3 className="text-4xl font-bold font-serif font-semibold capitalize lg:text-5xl text-center">
           Uspješno ste naručili
         </h3>
 
@@ -304,7 +304,7 @@ const Confirmation = () => {
           alt=""
         />
 
-        <h3 className="text-4xl font-bold font-serif capitalize lg:text-5xl text-center">
+        <h3 className="text-4xl font-bold font-serif font-semibold capitalize lg:text-5xl text-center">
           earth soul
         </h3>
       </div>
@@ -351,7 +351,7 @@ const Confirmation = () => {
     <div className="flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-12">
       {/* heading and image */}
       <div className="flex flex-col space-y-6 items-center justify-center border-b-2 border-black p-4 dark:border-white md:border-b-0 md:border-r-2 md:p-5">
-        <h3 className="text-3xl font-bold font-serif capitalize lg:text-4xl text-center">
+        <h3 className="text-3xl font-bold font-serif font-semibold capitalize lg:text-4xl text-center">
           Došlo je do greške
         </h3>
 
@@ -361,7 +361,7 @@ const Confirmation = () => {
           alt=""
         />
 
-        <h3 className="text-2xl font-bold font-serif capitalize lg:text-4xl text-center">
+        <h3 className="text-2xl font-bold font-serif font-semibold capitalize lg:text-4xl text-center">
           Molimo javite se na kontakt
         </h3>
       </div>

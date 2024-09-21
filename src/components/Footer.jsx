@@ -20,7 +20,7 @@ function Footer() {
         <footer className="containter max-w-6xl mx-auto flex flex-col items-center space-y-6  p-20 md:flex-row md:justify-between md:space-y-0 md:py-32 xl:py-44">
 
             <div>
-                <Link to='/' className="font-serif text-4xl font-semibold my-5">
+                <Link to='/' className="font-serif text-4xl font-extrabold my-5">
                     Earth Soul
                 </Link>
             </div>

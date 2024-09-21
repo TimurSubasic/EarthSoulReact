@@ -428,7 +428,7 @@ const Info = () => {
                 {/* {/* 25g price */} 
                 <div className="p-6 rounded-lg flex flex-col space-y-8 items-center justify-center bg-white dark:bg-slate-900 shadow-xl md:w-1/2">
 
-                    <h3 className="p-4 rounded-xl border-2 border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 text-3xl font-semibold font-serif">
+                    <h3 className="p-4 rounded-xl border-2 border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 text-3xl font-semibold font-serif font-semibold">
                         Earth Soul 25g
                     </h3>
 
@@ -491,7 +491,7 @@ const Info = () => {
                 {/* {/* 50g price */} 
                 <div className="p-6 rounded-lg flex flex-col space-y-8 items-center justify-center bg-white dark:bg-slate-900 shadow-xl md:w-1/2">
 
-                    <h3 className="p-4 rounded-xl border-2 border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 text-3xl font-semibold font-serif">
+                    <h3 className="p-4 rounded-xl border-2 border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 text-3xl font-semibold font-serif font-semibold">
                         Earth Soul 50g
                     </h3>
 
@@ -644,7 +644,7 @@ const Info = () => {
 
                             {/* Tab Title */}
                             <div className="text-center duration-500 mx-5 py-5 md:py-8 group-hover:scale-105 text-xl md:text-2xl">
-                              Odakle dolazi <span className="font-serif text-2xl md:text-3xl">Earth Soul</span> Shilajit?
+                              Odakle dolazi <span className="font-serif font-semibold text-2xl md:text-3xl">Earth Soul</span> Shilajit?
                             </div>
                             {/* Arrow */}
                             <div className=" duration-500   group-focus:-rotate-180 pr-5">
@@ -671,7 +671,7 @@ const Info = () => {
 
                             {/* Tab Title */}
                             <div className="text-center duration-500 mx-5 py-5 md:py-8 group-hover:scale-105 text-xl md:text-2xl">
-                              Kako dozirati <span className="font-serif text-2xl md:text-3xl">Earth Soul</span> Shilajit?
+                              Kako dozirati <span className="font-serif font-semibold text-2xl md:text-3xl">Earth Soul</span> Shilajit?
                             </div>
                             {/* Arrow */}
                             <div className=" duration-500   group-focus:-rotate-180 pr-5">
