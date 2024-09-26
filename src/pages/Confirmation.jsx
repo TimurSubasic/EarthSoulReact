@@ -30,10 +30,10 @@ const Confirmation = () => {
 
     emailjs
       .send(
-        'service_9gatelz',       //  your service ID
-        'template_h4ws01g',      //  your template ID
+        'service_dfqz7qc',       //  your service ID
+        'template_pprk6wl',      //  your template ID
         { message },             // Send the message string in an object
-        'GOQrHPyK5_JTNQBrI'      //  your public key
+        '1vm94HLtWH8iR4QRP'      //  your public key
       )
       .then(
         () => {
@@ -97,7 +97,7 @@ const Confirmation = () => {
 
         if (shippingData.name != '' && cartData.totalPrice != 0) {
 
-            return <button onClick={sendEmail} className='text-3xl text-center py-5 w-full bg-cyan-600 rounded-xl text-white font-serif font-semibold uppercase shadow-lg hover:shadow-cyan-600/30 duration-300 my-8 '>
+            return <button onClick={sendEmail} className='text-3xl text-center py-5 w-full bg-cyan-600 rounded-xl text-white font-serif font-semibold uppercase shadow-lg hover:shadow-cyan-600/30 duration-300 my-8 md:hover:scale-[1.03] '>
                 naručite
             </button>
         }
@@ -193,7 +193,7 @@ const Confirmation = () => {
     </div>
 
 
-    <Link to='/buy' className='text-3xl text-center py-5 w-full bg-yellow-400 rounded-xl text-black font-serif font-semibold uppercase shadow-lg hover:shadow-yellow-400/30 duration-300'>
+    <Link to='/buy' className='text-3xl text-center py-5 w-full bg-yellow-400 rounded-xl text-black font-serif font-semibold uppercase shadow-lg hover:shadow-yellow-400/30 duration-300 md:hover:scale-[1.03]'>
         Uredi
     </Link>
 
@@ -257,7 +257,7 @@ const Confirmation = () => {
     </div>
 
 
-    <Link to='/buy/cart' className='text-3xl text-center py-5 w-full bg-yellow-400 rounded-xl text-black font-serif font-semibold uppercase shadow-lg hover:shadow-yellow-400/30 duration-300'>
+    <Link to='/buy/cart' className='text-3xl text-center py-5 w-full bg-yellow-400 rounded-xl text-black font-serif font-semibold uppercase shadow-lg hover:shadow-yellow-400/30 duration-300 md:hover:scale-[1.03]'>
         Uredi
     </Link>
 

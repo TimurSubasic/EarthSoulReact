@@ -576,7 +576,7 @@ var zipMistake = 0
 
 
 
-            <button onClick={validateData} id="buy" type="button" className="text-3xl text-center py-5 w-full bg-cyan-600 rounded-xl text-white font-serif font-semibold uppercase shadow-lg hover:shadow-cyan-600/30 duration-300 ">
+            <button onClick={validateData} id="buy" type="button" className="text-3xl text-center py-5 w-full bg-cyan-600 rounded-xl text-white font-serif font-semibold uppercase shadow-lg hover:shadow-cyan-600/30 duration-300 md:hover:scale-[1.03] ">
                 Nastavite
             </button>
 

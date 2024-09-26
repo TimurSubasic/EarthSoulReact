@@ -456,7 +456,7 @@ const Info = () => {
 
                 {/* + 25 */}
                 <div onClick={ () => plus25() } className='h-12 w-12 cursor-pointer'>
-                    <FaPlusCircle className='h-full w-full bg-green-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-green-500/40 hover:shadow-xl hover:shadow-green-500/40 duration-300' />
+                    <FaPlusCircle className='h-full w-full bg-green-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-green-500/40 hover:shadow-xl hover:shadow-green-500/40 duration-300 md:hover:scale-[1.03]' />
                 </div>
 
 
@@ -472,7 +472,7 @@ const Info = () => {
 
                 {/* - 25 */}
                 <div onClick={ minus25 } className='h-12 w-12 cursor-pointer'>
-                    <FaMinusCircle className='h-full w-full bg-red-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-red-500/40 hover:shadow-xl hover:shadow-red-500/40 duration-300' />
+                    <FaMinusCircle className='h-full w-full bg-red-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-red-500/40 hover:shadow-xl hover:shadow-red-500/40 duration-300 md:hover:scale-[1.03]' />
                 </div>
                 
 
@@ -520,7 +520,7 @@ const Info = () => {
 
                 {/* + 50 */}
                 <div onClick={ () => plus50() } className='h-12 w-12 cursor-pointer'>
-                    <FaPlusCircle className='h-full w-full bg-green-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-green-500/40 hover:shadow-xl hover:shadow-green-500/40 duration-300' />
+                    <FaPlusCircle className='h-full w-full bg-green-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-green-500/40 hover:shadow-xl hover:shadow-green-500/40 duration-300 md:hover:scale-[1.03]' />
                 </div>
 
 
@@ -536,7 +536,7 @@ const Info = () => {
 
                 {/* - 50 */}
                 <div onClick={ () => minus50() } className='h-12 w-12 cursor-pointer'>
-                    <FaMinusCircle className='h-full w-full bg-red-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-red-500/40 hover:shadow-xl hover:shadow-red-500/40 duration-300' />
+                    <FaMinusCircle className='h-full w-full bg-red-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-red-500/40 hover:shadow-xl hover:shadow-red-500/40 duration-300 md:hover:scale-[1.03]' />
                 </div>
                 
 

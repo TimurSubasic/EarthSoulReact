@@ -51,7 +51,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
 
               {/* dark toggle mode */}
 
-              <div onClick={toggleDarkMode} className="h-7 w-7 cursor-pointer relative">
+              <div onClick={toggleDarkMode} className="h-7 w-7 cursor-pointer relative md:hover:scale-125 duration-200">
                   {/* Sun Icon */}
                   <FaSun
                       className={`absolute h-full w-full transition-all duration-700 ${
@@ -107,7 +107,7 @@ function Navbar({ darkMode, toggleDarkMode }) {
                 
 
                 {/* Dark mode toggle br 2 */}
-              <div onClick={toggleDarkMode} className="h-7 w-7 cursor-pointer relative text-white">
+              <div onClick={toggleDarkMode} className="h-7 w-7 cursor-pointer relative text-white hover:scale-125 duration-200 ">
                   {/* Sun Icon */}
                   <FaSun
                       className={`absolute h-full w-full transition-all duration-700 ${

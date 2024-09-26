@@ -244,13 +244,13 @@ const Cart = () => {
 
                 {/* + 25 */}
                 <div onClick={ () => setAmount25(amount25+1) } className='h-12 w-12 cursor-pointer'>
-                    <FaPlusCircle className='h-full w-full bg-green-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-green-500/40 hover:shadow-xl hover:shadow-green-500/40 duration-300' />
+                    <FaPlusCircle className='h-full w-full bg-green-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-green-500/40 hover:shadow-xl hover:shadow-green-500/40 duration-300 md:hover:scale-[1.03]' />
                 </div>
 
 
                 {/* - 25 */}
                 <div onClick={  minus25 } className='h-12 w-12 cursor-pointer'>
-                    <FaMinusCircle className='h-full w-full bg-red-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-red-500/40 hover:shadow-xl hover:shadow-red-500/40 duration-300' />
+                    <FaMinusCircle className='h-full w-full bg-red-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-red-500/40 hover:shadow-xl hover:shadow-red-500/40 duration-300 md:hover:scale-[1.03]' />
                 </div>
                 
 
@@ -317,13 +317,13 @@ const Cart = () => {
 
                 {/* + 50 */}
                 <div onClick={ () => setAmount50(amount50 + 1) } className='h-12 w-12 cursor-pointer'>
-                    <FaPlusCircle className='h-full w-full bg-green-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-green-500/40 hover:shadow-xl hover:shadow-green-500/40 duration-300' />
+                    <FaPlusCircle className='h-full w-full bg-green-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-green-500/40 hover:shadow-xl hover:shadow-green-500/40 duration-300 md:hover:scale-[1.03]' />
                 </div>
 
 
                 {/* - 50 */}
                 <div onClick={  minus50 } className='h-12 w-12 cursor-pointer'>
-                    <FaMinusCircle className='h-full w-full bg-red-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-red-500/40 hover:shadow-xl hover:shadow-red-500/40 duration-300' />
+                    <FaMinusCircle className='h-full w-full bg-red-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-red-500/40 hover:shadow-xl hover:shadow-red-500/40 duration-300 md:hover:scale-[1.03]' />
                 </div>
                 
 
@@ -397,7 +397,7 @@ const Cart = () => {
 
 
 
-<button onClick={ handleCartUpdateData } id="cart-next" type="button" className="text-3xl text-center py-5 w-full bg-cyan-600 rounded-xl text-white font-serif font-semibold uppercase shadow-lg hover:shadow-cyan-600/30 duration-300 ">
+<button onClick={ handleCartUpdateData } id="cart-next" type="button" className="text-3xl text-center py-5 w-full bg-cyan-600 rounded-xl text-white font-serif font-semibold uppercase shadow-lg hover:shadow-cyan-600/30 duration-300 md:hover:scale-[1.03] ">
         nastavite
 </button>
 
