@@ -71,7 +71,7 @@ const Info = () => {
 
     <h2 className="text-4xl font-bold md:text-5xl my-6 md:my-12">Upotreba</h2>
 
-    <div className="flex flex-col space-y-12 md:flex-row md:space-y-0 md:space-x-10">
+    <div className="flex flex-col space-y-12">
 
       {/* Direct Usage */}
       <div className="p-6 rounded-lg flex flex-col space-y-6 items-center bg-white dark:bg-slate-900 shadow-xl w-full">
@@ -80,11 +80,17 @@ const Info = () => {
           Direktno
         </h3>
 
-        <img src="/images/smola-kasika.png" className="rounded-lg w-3/4 lg:h-1/2 lg:w-auto" alt="" />
+        <div className='flex flex-col space-y-6 w-full items-center md:flex-row md:space-y-0 md:space-x-6'>
 
-        <p className="text-xl mx-5 lg:text-2xl">
-          Preporučenu dozu od 0,3g-0,5g (otprilike veličine zrna graška) stavite direktno u usta, ostavite par sekundi da se rastopi i progutajte. Nakon toga zalijte čašom vode. Koristite svako jutro na prazan stomak, kako bi postigli očekivane rezultate.
-        </p>
+          <img src="/images/smola-kasika.png" className="rounded-lg w-3/4 md:w-2/5 " alt="" />
+
+          <p className="text-xl mx-5 md:text-2xl lg:text-3xl ">
+            Preporučenu dozu od 0,3g-0,5g (otprilike veličine zrna graška) stavite direktno u usta, ostavite par sekundi da se rastopi i progutajte. Nakon toga zalijte čašom vode. Koristite svako jutro na prazan stomak, kako bi postigli očekivane rezultate.
+          </p>
+
+        </div>
+
+        
 
       </div>
 
@@ -95,11 +101,16 @@ const Info = () => {
           Sa vodom
         </h3>
 
-        <img src="/images/Shila-Upotreba.png" className="rounded-lg w-3/4 lg:h-1/2 lg:w-auto" alt="" />
+        <div className='flex flex-col space-y-6 w-full items-center md:flex-row md:space-y-0 md:space-x-6'>
 
-        <p className="text-xl mx-5 lg:text-2xl">
-          Preporučenu dozu od 0,3g-0,5g (otprilike veličine zrna graška) istopite u toploj vodi, čaju ili mlijeku. Radi poboljšanja okusa možete dodati i med. Koristite svako jutro na prazan stomak, kako bi postigli očekivane rezultate.
-        </p>
+          <img src="/images/Shila-Upotreba.png" className="rounded-lg w-3/4 md:w-2/5 " alt="" />
+
+          <p className="text-xl mx-5 md:text-2xl lg:text-3xl ">
+            Preporučenu dozu od 0,3g-0,5g (otprilike veličine zrna graška) istopite u toploj vodi, čaju ili mlijeku. Radi poboljšanja okusa možete dodati i med. Koristite svako jutro na prazan stomak, kako bi postigli očekivane rezultate.
+          </p>
+
+        </div>
+        
 
       </div>
 
