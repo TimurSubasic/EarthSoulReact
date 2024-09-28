@@ -90,7 +90,7 @@ const Home = () => {
               </h2>
               <p className="hidden p-5 font-normal bg-white rounded-lg text-xl shadow-lg md:block lg:text-2xl dark:bg-slate-900">
                 Obzirom da je potentan i moćan, čisti shilajit će biti vaša prva doza za bolji i zdraviji način života. Forma smole je najčišća forma shilajita i dolazi sa visokih stijena Himalaja. Ne sadrži nikakve hemikalije niti dodatne sastojke. Ukoliko želite da znate ostale informacije o ovom nevjerovatnom proizvodu kao što je način upotrebe, ostali benefiti i cijena možete da pritisnete
-                <Link to="/info" className="inline-block px-1 py-0.5 rounded-xl border-b-2 border-black duration-300 hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black">
+                <Link to="/info" className="inline-block px-1 py-0.5 rounded-xl border-b-2 border-black duration-300 hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black ml-2">
                   ovdje
                 </Link>.
               </p>
