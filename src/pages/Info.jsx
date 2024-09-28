@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
 import { getCartData, updateCartData } from '../utils/shippingData';
 
+
 const Info = () => {
 
   const cartData = getCartData();
@@ -80,7 +81,7 @@ const Info = () => {
           Direktno
         </h3>
 
-        <div className='flex flex-col space-y-6 w-full items-center md:flex-row md:space-y-0 md:space-x-6'>
+        <div className='flex flex-col space-y-6 w-full items-center md:flex-row md:space-y-0 md:space-x-12'>
 
           <img src="/images/smola-kasika.png" className="rounded-lg w-3/4 md:w-2/5 " alt="" />
 
@@ -101,7 +102,7 @@ const Info = () => {
           Sa vodom
         </h3>
 
-        <div className='flex flex-col space-y-6 w-full items-center md:flex-row md:space-y-0 md:space-x-6'>
+        <div className='flex flex-col space-y-6 w-full items-center md:flex-row md:space-y-0 md:space-x-12'>
 
           <img src="/images/Shila-Upotreba.png" className="rounded-lg w-3/4 md:w-2/5 " alt="" />
 
@@ -434,31 +435,38 @@ const Info = () => {
             </h2>
 
 
-            <div className="flex flex-col space-y-12 md:flex-row md:space-y-0 md:space-x-10 lg:space-x-16">
+            <div className="flex flex-col space-y-12">
 
                 {/* {/* 25g price */} 
-                <div className="p-6 rounded-lg flex flex-col space-y-8 items-center justify-center bg-white dark:bg-slate-900 shadow-xl md:w-1/2">
+                <div className="p-6 rounded-lg flex flex-col space-y-8 items-center justify-center bg-white dark:bg-slate-900 shadow-xl">
 
                     <h3 className="p-4 rounded-xl border-2 border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 text-3xl font-semibold font-serif">
                         Earth Soul 25g
                     </h3>
 
-                    <img src="/images/shila-25g.png" className="rounded-lg w-3/4 md:h-1/2 md:w-auto" alt=""/>
+                    <div className='flex flex-col space-y-6 items-center md:flex-row md:space-y-0 md:justify-around '>
 
-                    <h3 className="p-4 rounded-xl border-2 border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 text-3xl font-semibold">
-                        90 KM
-                    </h3>
 
-                    <p className="text-xl text-center lg:text-2xl">
+                    <img src="/images/shila-25g.png" className="rounded-lg w-3/4 md:w-[45%] lg:w-[37%] duration-700  " alt=""/>
+
+                    <div className='flex flex-col space-y-6 items-center md:w-[45%]  '>
+
+                      
+
+                    <p className="text-xl lg:text-2xl">
                         Doza za jednu osobu 2 mjeseca
                     </p>
 
                     {/* cart Add */}
-                    <div className=" border-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800 rounded-lg p-5 ">
+          <div className=" border-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800 rounded-xl p-5 w-full flex flex-col space-y-3 items-center ">
 
-                      <h2 className='font-semibold text-xl lg:text-2xl text-center mb-3 '>
-                        Dodajte u Korpu
-                      </h2>
+              <h3 className=" m-2 text-3xl font-bold font-static">
+                  90 KM
+              </h3>
+
+              <h2 className='font-medium text-xl lg:text-2xl mb-3 '>
+                Dodajte u Korpu
+              </h2>
 
             
             {/* buttons */}
@@ -489,6 +497,13 @@ const Info = () => {
 
 
             </div>
+          </div>
+
+                    </div>
+
+                    
+
+                    
 
 
             
@@ -500,17 +515,17 @@ const Info = () => {
 
 
                 {/* {/* 50g price */} 
-                <div className="p-6 rounded-lg flex flex-col space-y-8 items-center justify-center bg-white dark:bg-slate-900 shadow-xl md:w-1/2">
+                <div className="p-6 rounded-lg flex flex-col space-y-8 items-center justify-center bg-white dark:bg-slate-900 shadow-xl">
 
                     <h3 className="p-4 rounded-xl border-2 border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 text-3xl font-serif font-semibold">
                         Earth Soul 50g
                     </h3>
 
-                    <img src="/images/shila-main.jpg" className="rounded-lg w-3/4 md:h-1/2 md:w-auto" alt=""/>
+                  <div className='flex flex-col space-y-6 items-center md:flex-row md:space-y-0 md:justify-around '>
 
-                    <h3 className="p-4 rounded-xl border-2 border-gray-300 dark:border-slate-700 bg-gray-100 dark:bg-slate-800 text-3xl font-semibold">
-                        150 KM
-                    </h3>
+                    <img src="/images/shila-main.jpg" className="rounded-lg w-3/4 md:w-[45%] lg:w-[37%] duration-700    " alt=""/>
+
+                    <div className='flex flex-col space-y-6 items-center md:w-[45%] '>
 
                     <p className="text-xl text-center lg:text-2xl">
                         Doza za jednu osobu 4 mjeseca
@@ -518,18 +533,22 @@ const Info = () => {
 
 
                     {/* cart Add */}
-                    <div className=" border-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800 rounded-lg p-5 ">
+                    <div className=" border-2 border-gray-300 bg-gray-100 dark:border-slate-700 dark:bg-slate-800 rounded-xl p-5 w-full flex flex-col space-y-3 items-center ">
 
-                      <h2 className='font-semibold text-xl lg:text-2xl text-center mb-3 '>
-                        Dodajte u Korpu
-                      </h2>
+              <h3 className=" m-2 text-3xl font-bold font-static">
+                  150 KM
+              </h3>
+
+              <h2 className='font-medium text-xl lg:text-2xl mb-3 '>
+                Dodajte u Korpu
+              </h2>
 
             
             {/* buttons */}
             <div className="flex space-x-4 items-center">
 
 
-                {/* + 50 */}
+                {/* + 25 */}
                 <div onClick={ () => plus50() } className='h-12 w-12 cursor-pointer'>
                     <FaPlusCircle className='h-full w-full bg-green-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-green-500/40 hover:shadow-xl hover:shadow-green-500/40 duration-300 md:hover:scale-[1.03]' />
                 </div>
@@ -545,26 +564,23 @@ const Info = () => {
                 </div>
 
 
-                {/* - 50 */}
-                <div onClick={ () => minus50() } className='h-12 w-12 cursor-pointer'>
+                {/* - 25 */}
+                <div onClick={ minus50 } className='h-12 w-12 cursor-pointer'>
                     <FaMinusCircle className='h-full w-full bg-red-500 rounded-full p-1 text-white dark:text-black shadow-lg shadow-red-500/40 hover:shadow-xl hover:shadow-red-500/40 duration-300 md:hover:scale-[1.03]' />
                 </div>
                 
 
 
             </div>
-
-
-            
-        
-        
-        </div>
+          </div>
                     
 
                 </div>
 
+                </div>
 
 
+                </div>
             </div>
 
 

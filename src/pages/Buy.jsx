@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { updateShippingData, getCartData } from '../utils/shippingData';
+import { FaShoppingBasket } from "react-icons/fa";
+
 
 const Buy = () => {
 
@@ -391,7 +393,7 @@ var zipMistake = 0
                 </h3>
 
                 <Link to='/buy/cart' id="cart-btn" type="button" className="flex items-center justify-center space-x-3 p-2.5 border-2 border-gray-300 bg-white rounded-3xl shadow-md hover:scale-110 hover:shadow-xl dark:border-slate-700 dark:bg-slate-900 duration-300">
-                    <img src="/svgs/cart-arrow-down-svgrepo-com.svg" className="h-12 dark:invert" alt=""/>
+                    <FaShoppingBasket className="text-4xl m-1" alt=""/>
 
                     <span id="cart-amount" className="text-3xl font-bold mx-2">
                         {
